@@ -1,0 +1,43 @@
+{
+  "name": "stackline-assignment",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "repository": "git@github.com:Micfar1/stackline-assignment.git",
+  "author": "Michael <michael.lee.farringer@gmail.com>",
+  "private": true,
+  "scripts": {
+    "serve": "webpack serve --config webpack.config.js --mode development",
+    "build": "webpack --config webpack.config.js --mode development",
+    "build:prod": "webpack --config webpack.config.js --mode production"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^7.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router-dom": "^6.16.0",
+    "styled-components": "^6.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.0",
+    "@types/d3": "^7.4.3",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.27",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.3",
+    "babel-plugin-styled-components": "^2.1.4",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
