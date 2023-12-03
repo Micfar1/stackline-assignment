@@ -5,6 +5,7 @@ import {
   selectStacklineData,
 } from "../../../store/features/stacklineSlice";
 import { AppDispatch } from "../../../store/store";
+import TopBar from "../../molecules/top-bar";
 
 const MainPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -17,7 +18,11 @@ const MainPage = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
-  return <div>Main Page.</div>;
+  return (
+    <div>
+      <TopBar />
+    </div>
+  );
 };
 
 export default MainPage;
