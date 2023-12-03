@@ -4,15 +4,17 @@ export interface iStacklineData {
   image: string;
   subtitle: string;
   brand: string;
-  reviews: {
-    customer: string;
-    review: string;
-    score: number;
-  }[];
+  reviews: iStacklineReviews[];
   retailer: string;
   details: string[];
   tags: string[];
   sales: iStacklineSales[];
+}
+
+export interface iStacklineReviews {
+  customer: string;
+  review: string;
+  score: number;
 }
 
 export interface iStacklineSales {
