@@ -7,7 +7,7 @@ export interface iStacklineData {
   reviews: {
     customer: string;
     review: string;
-    score: 5;
+    score: number;
   }[];
   retailer: string;
   details: string[];
