@@ -11,9 +11,9 @@ interface iTheme {
 export const theme: iTheme = {
   colors: {
     darkBlue: "#052849",
-    darkGrey: "",
-    lightBlue: "",
-    lightGrey: "",
-    white: "",
+    darkGrey: "#97a3bd",
+    lightBlue: "#44a7f6",
+    lightGrey: "#f6f8fa",
+    white: "white",
   },
 };
