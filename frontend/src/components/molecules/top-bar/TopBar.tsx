@@ -32,9 +32,13 @@ const StacklineLogo = styled.div`
   }
 `;
 
-const TopBar = () => {
+interface iTopBarProps {
+  className?: string;
+}
+
+const TopBar = ({ className }: iTopBarProps) => {
   return (
-    <TopBarWrapper>
+    <TopBarWrapper className={className}>
       <StacklineLogo />
     </TopBarWrapper>
   );

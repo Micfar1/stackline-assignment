@@ -1,10 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { getStacklineData } from "../../api/StacklineAPI";
-import {
-  iStacklineData,
-  iStacklineReviews,
-  iStacklineSales,
-} from "../../models/StacklineDataModel";
+import { iStacklineData } from "../../models/StacklineDataModel";
 import { RootState } from "../store";
 
 export const getStacklineApiData = createAsyncThunk(
@@ -20,20 +16,7 @@ const initialState: {
   isLoading: boolean;
   error: string;
 } = {
-  data: [
-    {
-      id: "",
-      title: "",
-      image: "",
-      subtitle: "",
-      brand: "",
-      reviews: [] as iStacklineReviews[],
-      retailer: "",
-      details: [] as string[],
-      tags: [] as string[],
-      sales: [] as iStacklineSales[],
-    },
-  ],
+  data: [] as iStacklineData[],
   isLoading: false,
   error: "",
 };
