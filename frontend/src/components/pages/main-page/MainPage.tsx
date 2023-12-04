@@ -14,6 +14,7 @@ import {
 } from "./styles";
 import ProductDetails from "../../organisms/product-details";
 import SalesLineChart from "../../organisms/product-details/sales-line-chart";
+import SalesTable from "../../organisms/sales-table";
 
 const MainPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -36,6 +37,7 @@ const MainPage = () => {
         </SectionProductDetails>
         <SectionDataAnalytics>
           <SalesLineChart salesData={data[0].sales} />
+          <SalesTable salesData={data[0].sales} />
         </SectionDataAnalytics>
       </DivMainPageBody>
     </DivMainPageContainer>
