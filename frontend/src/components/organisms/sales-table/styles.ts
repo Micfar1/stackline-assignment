@@ -25,13 +25,17 @@ export const DivSalesTableContainer = styled.div`
   }
 
   td {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     border-bottom: 1px solid ${({ theme }) => theme.colors.moderateGrey};
     color: ${({ theme }) => theme.colors.darkGrey};
 
     &:last-child {
       padding-right: 3rem;
     }
+  }
+
+  tbody > tr:last-child > td {
+    border-bottom: none;
   }
 `;
 
@@ -42,12 +46,12 @@ export const ThSalesTableHeader = styled.th<{ isActive: boolean }>`
   -ms-user-select: none; /* IE 10+ and Edge */
   user-select: none; /* Standard syntax */
 
-  font-size: 14px;
   border-bottom: 1px solid ${({ theme }) => theme.colors.moderateGrey};
   color: ${({ theme }) => theme.colors.black};
-  text-transform: uppercase;
+  font-size: 14px;
   font-weight: 400;
   text-align: left;
+  text-transform: uppercase;
 
   padding: 1.5rem;
   padding-right: 0;

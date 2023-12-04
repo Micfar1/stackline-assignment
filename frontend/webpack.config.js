@@ -43,9 +43,6 @@ module.exports = {
       template: path.join(__dirname, "src", "index.html"),
     }),
   ],
-  optimization: {
-    runtimeChunk: "single",
-  },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
   },

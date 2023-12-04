@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const DivLineChartContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
-  box-shadow: 2px 2px 10px 1px ${({ theme }) => theme.colors.moderateGrey};
   position: relative;
   width: 100%;
   box-sizing: border-box;

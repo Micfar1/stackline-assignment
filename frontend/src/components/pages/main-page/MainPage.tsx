@@ -9,12 +9,14 @@ import TopBar from "../../molecules/top-bar";
 import {
   DivMainPageBody,
   DivMainPageContainer,
+  LoadingContainer,
   SectionDataAnalytics,
   SectionProductDetails,
 } from "./styles";
 import ProductDetails from "../../organisms/product-details";
 import SalesLineChart from "../../organisms/product-details/sales-line-chart";
 import SalesTable from "../../organisms/sales-table";
+import { FiLoader } from "react-icons/fi";
 
 const MainPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -24,7 +26,16 @@ const MainPage = () => {
     dispatch(getStacklineApiData());
   }, [dispatch]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading)
+    return (
+      <DivMainPageContainer isLoading>
+        <TopBar />
+        <LoadingContainer>
+          <FiLoader size="58" />
+        </LoadingContainer>
+      </DivMainPageContainer>
+    );
+
   if (error) return <div>Error: {error}</div>;
   if (data.length === 0) return <div>No data</div>;
 
