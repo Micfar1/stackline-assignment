@@ -26,6 +26,7 @@ export const SectionProductDetails = styled.section`
 `;
 
 export const SectionDataAnalytics = styled.section`
+  height: fit-content;
   width: 100%;
   background-color: white;
   box-shadow: 2px 2px 10px 1px ${({ theme }) => theme.colors.moderateGrey};
