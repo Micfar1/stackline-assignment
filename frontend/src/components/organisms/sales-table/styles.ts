@@ -39,7 +39,7 @@ export const DivSalesTableContainer = styled.div`
   }
 `;
 
-export const ThSalesTableHeader = styled.th<{ isActive: boolean }>`
+export const ThSalesTableHeader = styled.th<{ "data-isactive": string }>`
   cursor: pointer;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -62,7 +62,7 @@ export const ThSalesTableHeader = styled.th<{ isActive: boolean }>`
 
   svg {
     margin-left: 0.5rem;
-    color: ${({ theme, isActive }) =>
-      isActive ? theme.colors.lightBlue : theme.colors.darkGrey};
+    color: ${({ theme, "data-isactive": isActive }) =>
+      isActive === "true" ? theme.colors.lightBlue : theme.colors.darkGrey};
   }
 `;

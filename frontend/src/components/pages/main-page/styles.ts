@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DivMainPageContainer = styled.div<{ isLoading?: boolean }>`
+export const DivMainPageContainer = styled.div<{ "data-loading"?: string }>`
   background-color: ${({ theme }) => theme.colors.lightGrey};
   box-sizing: border-box;
   width: 100%;
@@ -9,7 +9,7 @@ export const DivMainPageContainer = styled.div<{ isLoading?: boolean }>`
   grid-template-rows: auto 1fr;
   padding-bottom: 1rem;
 
-  ${({ isLoading }) => isLoading && "height: 100vh;"}
+  ${({ "data-loading": loading }) => loading == "true" && "height: 100vh;"}
 `;
 
 export const DivMainPageBody = styled.div`

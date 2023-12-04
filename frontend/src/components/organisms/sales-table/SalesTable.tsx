@@ -62,7 +62,7 @@ const SalesTable = ({ className, salesData }: iSalesTableProps) => {
                 onClick={() =>
                   setSortState(getNextSortState(sortState, header.key))
                 }
-                isActive={header.key == sortState.key}
+                data-isactive={`${header.key == sortState.key}`}
               >
                 {header.label}
                 {sortState.key === header.key &&

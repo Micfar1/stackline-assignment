@@ -28,7 +28,7 @@ const MainPage = () => {
 
   if (isLoading)
     return (
-      <DivMainPageContainer isLoading>
+      <DivMainPageContainer data-loading={`${isLoading}`}>
         <TopBar />
         <LoadingContainer>
           <FiLoader size="58" />
