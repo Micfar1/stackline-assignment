@@ -76,7 +76,7 @@ const SalesTable = ({ className, salesData }: iSalesTableProps) => {
           </tr>
         </thead>
         <tbody>
-          {tableData.map((sale: iStacklineSales, index) => {
+          {tableData.map((sale: iStacklineSales) => {
             const currencyFormat = new Intl.NumberFormat("en-US", {
               style: "currency",
               currency: "USD",
@@ -85,7 +85,7 @@ const SalesTable = ({ className, salesData }: iSalesTableProps) => {
             });
 
             return (
-              <tr key={index}>
+              <tr key={sale.weekEnding}>
                 <td>{reverseStringDateOrder(sale.weekEnding)}</td>
                 <td>{currencyFormat.format(sale.retailSales)}</td>
                 <td>{currencyFormat.format(sale.wholesaleSales)}</td>
